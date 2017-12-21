@@ -16,19 +16,19 @@ cv2.moveWindow('m1', 10, 10)
 
 height, width, channels = m1.shape
 
-cv2.imshow('grayscale', ct.convert_rbg_to_grayscale(m1))
+cv2.imshow('grayscale', convert_rbg_to_grayscale(m1))
 cv2.moveWindow('grayscale', 10 + width, 10)
 
-cv2.imshow('recolored r g b', ct.color_sep_image(m1, 'rgb'))
+cv2.imshow('recolored r g b', color_sep_image(m1, 'rgb'))
 cv2.moveWindow('recolored r g b', 10, 45 + height)
 
-cv2.imshow('recolored h s v', ct.color_sep_image(m1, 'hsv'))
+cv2.imshow('recolored h s v', color_sep_image(m1, 'hsv'))
 cv2.moveWindow('recolored h s v', 10, 70 + (2 * height))
 
-cv2.imshow('basic thresh', ct.basic_threshold(m1BW, 70))
+cv2.imshow('basic thresh', basic_threshold(m1BW, 70))
 cv2.moveWindow('basic thresh', 10 + 2 * width, 10)
 
-cv2.imshow('adaptive thresh', ct.adaptive_threshold(m1BW, 21))
+cv2.imshow('adaptive thresh', adaptive_threshold(m1BW, 21))
 cv2.moveWindow('adaptive thresh', 10 + 3 * width, 10)
 
 print("size: {}x{} channels: {}".format(width, height, channels))
@@ -36,5 +36,5 @@ print("size: {}x{} channels: {}".format(width, height, channels))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-rgba_image = ct.convert_rgb_to_rgba(m1)
+rgba_image = convert_rgb_to_rgba(m1)
 cv2.imwrite("test.png", rgba_image)
