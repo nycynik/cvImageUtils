@@ -1,10 +1,11 @@
-import sys
+# import sys
 import cv2
 import os
 import numpy as np
 
-sys.path.append('../')
-import cvImageUtils.ColorUtils as ct
+# sys.path.append('../')
+from cvImageUtils.ColorUtils import *
+# import cvImageUtils.ColorUtils as ct
 
 # load and show the image normally
 image_folder = (os.path.join(os.getcwd(), "../samples"))
