@@ -1,1 +1,1 @@
-from .ColorUtils import ColorUtils
+from . import ColorUtils
